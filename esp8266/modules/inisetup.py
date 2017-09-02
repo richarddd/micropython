@@ -35,18 +35,12 @@ programming).
 def setup():
     check_bootsec()
     print("Performing initial setup")
-    wifi()
+    #wifi()
     uos.VfsFat.mkfs(bdev)
     vfs = uos.VfsFat(bdev)
     uos.mount(vfs, '/')
     with open("boot.py", "w") as f:
         f.write("""\
-# This file is executed on every boot (including wake-boot from deepsleep)
-#import esp
-#esp.osdebug(None)
-import gc
-#import webrepl
-#webrepl.start()
-gc.collect()
+import main
 """)
     return vfs
