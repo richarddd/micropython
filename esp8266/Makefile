@@ -6,7 +6,7 @@ QSTR_DEFS = qstrdefsport.h #$(BUILD)/pins_qstr.h
 MICROPY_PY_USSL = 1
 MICROPY_SSL_AXTLS = 1
 MICROPY_FATFS = 1
-MICROPY_PY_BTREE = 1
+MICROPY_PY_BTREE = 0
 
 FROZEN_DIR ?= scripts
 FROZEN_MPY_DIR ?= modules
